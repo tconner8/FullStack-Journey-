@@ -14,4 +14,5 @@ My Goal is to become a Full-Stack Software Developer, start freelancing, and eve
 -DATABASE (TBD)
 ## Progress Log 
 -Day 1: Enviorment setup and Github repository created.
+-Day 2 Index.html and import from VS code to Github
 
