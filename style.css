@@ -18,11 +18,9 @@ body {
     margin-bottom: 10px /* margin-bottom */
 }
 
-h2 {
-    color: navy;
-}
-ul li {
+.focus-list li {
     font-size: 18px;
+    color: darkgreen;
     margin-bottom: 5px; /* margin-bottom */
 }
 
