@@ -16,4 +16,5 @@ My Goal is to become a Full-Stack Software Developer, start freelancing, and eve
 -Day 1: Enviorment setup and Github repository created.
 -Day 2  Index.html and import from VS code to Github
 -Day 3  Git basics (add, commit, push), handling merge conflicts, HTML nesting & structure 
--Day 4 CSS, HTML styling/structuring, Live server previews, Git workflows (classes, div). more stage, commit, push work
+-Day 4  CSS, HTML styling/structuring, Live server previews, Git workflows (classes, div). more stage, commit, push work
+-Day 5  Link HTML, CSS, and JavaScript(.js), Listened for user events, change text, styles dynamically, debugged mistakes, commit + push
