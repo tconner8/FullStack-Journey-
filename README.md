@@ -1,9 +1,9 @@
 md
 # Full-Stack Developer Journey 
 ## About Me
-I am an aspiring full-stack software engineer cureently learing web development from the ground up.
+I am an emerging full-stack software engineer currently learning web development from the ground up.
 ## Goal 
-My Goal is to become a Full-Stack Software Developer, start freelancing, and eventually secure a full-time role. 
+My Goal is to become a Full-Stack Software Developer, begin freelancing, and eventually secure a full-time role. 
 ## Tech Stack (In progress) 
 -HTML
 -CSS
