@@ -1,10 +1,22 @@
-const button = document.getElementById("alertBtn");
-const message = document.getElementById("message");
+let name = "Ta";
+let day = 7;
+
+console.log(name);
+console.log(day);
+
+function greet() {
+    console.log("Welcome to Day " + day); 
+}
+
+greet();
 
 let clicked = false;
 
-button.addEventListener("click", () => {
-    if (!clicked) {
+const button = document.getElementById("alertBtn");
+const message = document.getElementById("message");
+
+function updateMessage() {
+  if (!clicked) {
       message.textContent = "Button clicked 😎🫡";
       message.style.color = "darkred";
       message.style.fontSize = "24px";
@@ -15,4 +27,6 @@ button.addEventListener("click", () => {
         message.style.fontSize = '16px';
         clicked = false;
     }
-});
+}
+
+button.addEventListener("click", updateMessage); 
