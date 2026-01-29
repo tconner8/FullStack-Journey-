@@ -10,10 +10,24 @@ function greet() {
 
 greet();
 
-let clicked = false;
+let isBlue = false;
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
+
+function changeText() {
+  if (!isBlue) {
+    console.log("Button clicked");
+    message.textContent = "Text is blue 😎";
+    message.style.color = "blue";
+    isBlue = true;
+  } else {
+    console.log("Button clicked");
+    message.textContent = "Text is black";
+    message.style.color = "black";
+    isBlue = false;
+  }
+}
 
 function updateMessage() {
   if (!clicked) {
@@ -29,4 +43,5 @@ function updateMessage() {
     }
 }
 
-button.addEventListener("click", updateMessage); 
+button.addEventListener("click", changeText);
+  
