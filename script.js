@@ -29,19 +29,18 @@ function changeText() {
   }
 }
 
-function updateMessage() {
-  if (!clicked) {
-      message.textContent = "Button clicked 😎🫡";
-      message.style.color = "darkred";
-      message.style.fontSize = "24px";
-      clicked = true;  
-    } else {
-        message.textContent = "Waiting for interaction...";
-        message.style.color = "black";
-        message.style.fontSize = '16px';
-        clicked = false;
-    }
+function updateMessage(text, color) {
+      message.textContent = text;
+      message.style.color = color; 
 }
 
-button.addEventListener("click", changeText);
+button.addEventListener("click", () => {
+  if (!isBlue) {
+    updateMessage("Text is blue 😎", "blue");
+    isBlue = true;
+  } else {
+    updateMessage("Text is black", "black");
+    isBlue = false;
+  }
+});
   
