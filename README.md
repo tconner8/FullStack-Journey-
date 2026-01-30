@@ -19,4 +19,6 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 4  CSS, HTML styling/structuring, Live server previews, Git workflows (classes, div). more stage, commit, push work.
 -Day 5  Link HTML, CSS, and JavaScript(.js), Listened for user events, change text, styles dynamically, debugged mistakes, commit + push.
 -Day 6 Variables, functions, function calls, event driven logic, Reading and trusting console.
--Day 7 if/ else, state with booleans, functions + events, scope (global vs local), why errors happen 
+-Day 7 if/ else, state with booleans, functions + events, scope (global vs local), why errors happen.
+-Day 8 Use parameters, pass arguments, reuse functions, Read + refactor code.
+-Day 9
