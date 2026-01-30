@@ -12,35 +12,29 @@ greet();
 
 let isBlue = false;
 
+const messages = [
+  { text: "Text is blue 😎", color: "blue" },
+  { text: "Text is black", color: "black" }
+];
+
+let currentIndex = 0;
+
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
 
-function changeText() {
-  if (!isBlue) {
-    console.log("Button clicked");
-    message.textContent = "Text is blue 😎";
-    message.style.color = "blue";
-    isBlue = true;
-  } else {
-    console.log("Button clicked");
-    message.textContent = "Text is black";
-    message.style.color = "black";
-    isBlue = false;
-  }
-}
-
+console.log("Button clicked");
+console.log("yeooooo I added another log in the console");
+   
 function updateMessage(text, color) {
       message.textContent = text;
       message.style.color = color; 
 }
 
 button.addEventListener("click", () => {
-  if (!isBlue) {
-    updateMessage("Text is blue 😎", "blue");
-    isBlue = true;
-  } else {
-    updateMessage("Text is black", "black");
-    isBlue = false;
-  }
+  const currentMessage = messages[currentIndex];
+
+  updateMessage(currentMessage.text, currentMessage.color);
+
+  currentIndex = (currentIndex + 1) % messages.length;
 });
   
