@@ -23,3 +23,4 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 8 Use parameters, pass arguments, reuse functions, Read + refactor code.
 -Day 9 Implemented array-based logic, removed redundant if/else code, cleaned up text/color handling.
 -Day 10 Implemented object-based UI logic, Fixed broken data, Improved stlying control.
+-Day 11 
