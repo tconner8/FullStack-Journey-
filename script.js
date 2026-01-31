@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 7;
+let day = 10;
 
 console.log(name);
 console.log(day);
@@ -13,8 +13,16 @@ greet();
 let isBlue = false;
 
 const messages = [
-  { text: "Text is blue 😎", color: "blue" },
-  { text: "Text is black", color: "black" }
+  { 
+    text: "Text is blue 😎", 
+    color: "blue",
+    fontSize: "24px"
+  },
+  { 
+    text: "Text is black 🫡", 
+    color: "black",
+    fontSize: "16px"
+  }
 ];
 
 let currentIndex = 0;
@@ -25,15 +33,14 @@ const message = document.getElementById("message");
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
    
-function updateMessage(text, color) {
-      message.textContent = text;
-      message.style.color = color; 
+function updateMessage(messageData) {
+      message.textContent = messageData.text;
+      message.style.color = messageData.color;
+      message.style.fontSize = messageData.fontSize; 
 }
 
 button.addEventListener("click", () => {
-  const currentMessage = messages[currentIndex];
-
-  updateMessage(currentMessage.text, currentMessage.color);
+  updateMessage(messages[currentIndex]);
 
   currentIndex = (currentIndex + 1) % messages.length;
 });
