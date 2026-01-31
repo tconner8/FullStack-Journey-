@@ -21,4 +21,5 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 6 Variables, functions, function calls, event driven logic, Reading and trusting console.
 -Day 7 if/ else, state with booleans, functions + events, scope (global vs local), why errors happen.
 -Day 8 Use parameters, pass arguments, reuse functions, Read + refactor code.
--Day 9
+-Day 9 Implemented array-based logic, removed redundant if/else code, cleaned up text/color handling.
+-Day 10 
