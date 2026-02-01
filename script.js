@@ -32,6 +32,12 @@ const message = document.getElementById("message");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
+
+const dynamicMessage = document.createElement("p");
+dynamicMessage.textContent = "I was created with JavaScript 🎶";
+dynamicMessage.style.fontWeight = "bold";
+
+document.body.appendChild(dynamicMessage);
    
 function updateMessage(messageData) {
       message.textContent = messageData.text;
