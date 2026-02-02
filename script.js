@@ -12,6 +12,13 @@ greet();
 
 let isBlue = false;
 
+const items = [
+  "Learn HTML",
+  "Practice CSS",
+  "Master JavaScript",
+  "Build Projects 👌",
+];
+
 const messages = [
   { 
     text: "Text is blue 😎", 
@@ -29,6 +36,7 @@ let currentIndex = 0;
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
+const list = document.getElementById("list");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -36,6 +44,13 @@ console.log("yeooooo I added another log in the console");
 const dynamicMessage = document.createElement("p");
 dynamicMessage.textContent = "I was created with JavaScript 🎶";
 dynamicMessage.style.fontWeight = "bold";
+
+items.forEach(item => {
+  const p = document.createElement("p");
+  p.textContent = item;
+  p.style.fontWeight = "bold";
+  list.appendChild(p);
+});
 
 document.body.appendChild(dynamicMessage);
    
