@@ -24,4 +24,6 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 9 Implemented array-based logic, removed redundant if/else code, cleaned up text/color handling.
 -Day 10 Implemented object-based UI logic, fixed broken data, improved stlying control.
 -Day 11 Dynamic DOM creation, correct placement, mental model practice
--Day 12 
+-Day 12 Dynamic list rendered, reading console errors, traced null references
+-Day 13 Event listeners, dynamic DOM updates, state driven UI, preventing duplications.
+-Day 14 
