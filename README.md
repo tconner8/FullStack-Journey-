@@ -26,4 +26,5 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 11 Dynamic DOM creation, correct placement, mental model practice
 -Day 12 Dynamic list rendered, reading console errors, traced null references
 -Day 13 Event listeners, dynamic DOM updates, state driven UI, preventing duplications.
--Day 14 
+-Day 14 Remove elements from the page, update state (the array), re-render UI correctly, understand why "remove" ≠ "hide"
+-Day 15
