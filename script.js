@@ -45,12 +45,16 @@ const dynamicMessage = document.createElement("p");
 dynamicMessage.textContent = "I was created with JavaScript 🎶";
 dynamicMessage.style.fontWeight = "bold";
 
+function renderList() {
+  list.innerHTML = "";
+  
 items.forEach(item => {
   const p = document.createElement("p");
   p.textContent = item;
   p.style.fontWeight = "bold";
   list.appendChild(p);
 });
+}
 
 document.body.appendChild(dynamicMessage);
    
@@ -62,7 +66,13 @@ function updateMessage(messageData) {
 
 button.addEventListener("click", () => {
   updateMessage(messages[currentIndex]);
+if (!items.includes("Ship projects 🚀")) {
+  items.push("Ship projects 🚀");
+}  
+
+  renderList();
 
   currentIndex = (currentIndex + 1) % messages.length;
 });
-  
+
+
