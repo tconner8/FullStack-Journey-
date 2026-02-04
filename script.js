@@ -48,11 +48,17 @@ dynamicMessage.style.fontWeight = "bold";
 function renderList() {
   list.innerHTML = "";
   
-items.forEach(item => {
+items.forEach((item, index) => {
   const p = document.createElement("p");
   p.textContent = item;
-  p.style.fontWeight = "bold";
-  list.appendChild(p);
+  p.style.cursor = "pointer";
+
+  p.addEventListener("click", () => {
+    items.splice(index, 1);
+    renderList();
+  })
+
+  list.appendChild(p)
 });
 }
 
