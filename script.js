@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 10;
+let day = 16;
 
 console.log(name);
 console.log(day);
@@ -54,6 +54,7 @@ items.forEach((item, index) => {
   p.style.cursor = "pointer";
 
   p.addEventListener("click", () => {
+    console.log(item);
     items.splice(index, 1);
     renderList();
   })
