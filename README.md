@@ -31,3 +31,16 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 16 Clicked -> toggle behavior, fixed CSS typo, js + DOM interplay.
 -Day 17 Upgraded data structure, connected state -> UI.
 -Day 18
+-Day 19
+-Day 20
+-Day 21
+-Day 22
+-Day 23
+-Day 24
+-Day 25
+-Day 26
+-Day 27
+-Day 28
+-Day 29
+-Day 30
+
