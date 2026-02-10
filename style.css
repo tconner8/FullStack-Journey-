@@ -62,3 +62,10 @@ h3 {
     background-color: lightblue;
     color: black;
 }
+
+.selected {
+    background-color: lightblue;
+    color: black;
+    border-radius: 6px;
+    padding: 6px;
+}
