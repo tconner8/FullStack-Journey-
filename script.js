@@ -13,10 +13,10 @@ greet();
 let isBlue = false;
 
 const items = [
-  "Learn HTML",
-  "Practice CSS",
-  "Master JavaScript",
-  "Build Projects 👌",
+ { text: "Learn HTML",selected: false },
+ { text: "Practice CSS", selected: false },
+ { text: "Master JavaScript", selected: false },
+ { text: "Build Projects 👌", selected: false }
 ];
 
 const messages = [
@@ -36,7 +36,7 @@ let currentIndex = 0;
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
-const list = document.getElementById("list");
+const listE1 = document.getElementById("list");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -48,17 +48,25 @@ dynamicMessage.style.fontWeight = "bold";
 function renderList() {
   list.innerHTML = "";
   
-items.forEach((item) => {
+items.forEach((item, index) => {
   const p = document.createElement("p");
-  p.textContent = item;
+  p.textContent = item.text;
   p.style.cursor = "pointer";
 
+  if (item.selected) {
+    p.classList.add("selected");
+  }
+
   p.addEventListener("click", () => {
-    p.classList.toggle("selected");
+    toggleItem(index);
     console.log(item);
+    function toggleItem(index) {
+      items[index].selected = !items[index].selected;
+    renderList();
+    }
   });
 
-  list.appendChild(p);
+  listE1.appendChild(p);
 });
 }
 
