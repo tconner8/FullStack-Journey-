@@ -30,7 +30,7 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 15 Button owns add behavior, list items own remove behavior, splice updates data, renderList() refreshes UI, console.log is a learning/debug tool, removing ≠ error, its behavior change.
 -Day 16 Clicked -> toggle behavior, fixed CSS typo, js + DOM interplay.
 -Day 17 Upgraded data structure, connected state -> UI.
--Day 18
+-Day 18 Added visual feedback using selected CSS class
 -Day 19
 -Day 20
 -Day 21
