@@ -29,4 +29,5 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 14 Remove elements from the page, update state (the array), re-render UI correctly, understand why "remove" ≠ "hide".
 -Day 15 Button owns add behavior, list items own remove behavior, splice updates data, renderList() refreshes UI, console.log is a learning/debug tool, removing ≠ error, its behavior change.
 -Day 16 Clicked -> toggle behavior, fixed CSS typo, js + DOM interplay.
--Day 17
+-Day 17 Upgraded data structure, connected state -> UI.
+-Day 18
