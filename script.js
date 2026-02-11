@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 19;
+let day = 20;
 
 console.log(name);
 console.log(day);
@@ -37,6 +37,9 @@ let currentIndex = 0;
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
 const listE1 = document.getElementById("list");
+
+const input = document.getElementById("newItemInput");
+const addBTn = document.getElementById("addBtn");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -89,4 +92,16 @@ if (!items.includes("Ship projects 🚀")) {
   currentIndex = (currentIndex + 1) % messages.length;
 });
 
+addBTn.addEventListener("click", () => {
+  const value = input.value.trim();
 
+  if (value !== "") {
+    items.push({
+      text: value,
+      selected: false
+    });
+
+    input.value = "";
+    renderList();
+  }
+});
