@@ -32,7 +32,7 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 17 Upgraded data structure, connected state -> UI.
 -Day 18 Added visual feedback using selected CSS class
 -Day 19 Reading console errors, fixing HTML syntax, structuring files properly, managing arrays of objects, re-rendering dynamic lists.
--Day 20
+-Day 20 Extracted logic into a function, rewired event listeners, kept behavior intact, did not break any codes this time around.
 -Day 21
 -Day 22
 -Day 23
