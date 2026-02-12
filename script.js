@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 20;
+let day = 21;
 
 console.log(name);
 console.log(day);
