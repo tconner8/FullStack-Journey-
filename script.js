@@ -48,6 +48,20 @@ const dynamicMessage = document.createElement("p");
 dynamicMessage.textContent = "I was created with JavaScript 🎶";
 dynamicMessage.style.fontWeight = "bold";
 
+function addItem() {
+  const value = input.value.trim();
+
+  if (value === "") return;
+
+  items.push({
+    text: value,
+    selected: false
+});
+
+input .value = "";
+renderList();
+}
+
 function renderList() {
   list.innerHTML = "";
   
@@ -92,16 +106,9 @@ if (!items.includes("Ship projects 🚀")) {
   currentIndex = (currentIndex + 1) % messages.length;
 });
 
-addBTn.addEventListener("click", () => {
-  const value = input.value.trim();
-
-  if (value !== "") {
-    items.push({
-      text: value,
-      selected: false
-    });
-
-    input.value = "";
-    renderList();
+addBTn.addEventListener("click", addItem);
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    addItem();
   }
 });
