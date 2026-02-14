@@ -12,7 +12,7 @@ greet();
 
 let isBlue = false;
 
-const items = [
+let items = JSON.parse(localStorage.getItem("goals")) || [
  { text: "Learn HTML",selected: false },
  { text: "Practice CSS", selected: false },
  { text: "Master JavaScript", selected: false },
@@ -85,6 +85,7 @@ items.forEach((item, index) => {
 
   listE1.appendChild(p);
 });
+localStorage.setItem("goals", JSON.stringify(items));
 }
 
 document.body.appendChild(dynamicMessage);
