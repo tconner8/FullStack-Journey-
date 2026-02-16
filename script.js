@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 21;
+let day = 23;
 
 console.log(name);
 console.log(day);
@@ -37,9 +37,9 @@ let currentIndex = 0;
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
 const listE1 = document.getElementById("list");
-
 const input = document.getElementById("newItemInput");
 const addBTn = document.getElementById("addBtn");
+const clearCompletedBtn = document.getElementById("clearCompletedBtn");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -113,3 +113,8 @@ input.addEventListener("keydown", (e) => {
     addItem();
   }
 });
+
+clearCompletedBtn.addEventListener("click", () => {
+    items = items.filter(item => !item.selected);
+    renderList();
+  });
