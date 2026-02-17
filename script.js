@@ -13,7 +13,7 @@ greet();
 let isBlue = false;
 
 let items = JSON.parse(localStorage.getItem("goals")) || [
- { text: "Learn HTML",selected: false },
+ { text: "Learn HTML", selected: false },
  { text: "Practice CSS", selected: false },
  { text: "Master JavaScript", selected: false },
  { text: "Build Projects 👌", selected: false }
@@ -34,12 +34,18 @@ const messages = [
 
 let currentIndex = 0;
 
+
+let currentFilter = "all";
+
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
 const listE1 = document.getElementById("list");
 const input = document.getElementById("newItemInput");
 const addBTn = document.getElementById("addBtn");
 const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+const showAllBtn = document.getElementById("showAllBtn");
+const showActiveBtn = document.getElementById("showActiveBtn");
+const showCompletedBtn = document.getElementById("showCompletedBtn");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -65,7 +71,13 @@ renderList();
 function renderList() {
   list.innerHTML = "";
   
-items.forEach((item, index) => {
+let filteredItems = items.filter(item => {
+  if (currentFilter === "all") return true;
+  if (currentFilter === "active") return !items.selected;
+  if (currentFilter === "completed") return item.selected;
+});
+
+filteredItems.forEach((item, index) => {
   const p = document.createElement("p");
   p.textContent = item.text;
   p.style.cursor = "pointer";
@@ -74,8 +86,7 @@ items.forEach((item, index) => {
     p.classList.add("selected");
   }
 
-  p.addEventListener("click", () => {
-    toggleItem(index);
+  p.addEventListener("click", () => { toggleItem(index);
     console.log(item);
     function toggleItem(index) {
       items[index].selected = !items[index].selected;
@@ -118,3 +129,19 @@ clearCompletedBtn.addEventListener("click", () => {
     items = items.filter(item => !item.selected);
     renderList();
   });
+
+showAllBtn.addEventListener("click", () => {
+  currentFilter = "all";
+  renderList;
+});
+
+showActiveBtn.addEventListener("click", () => {
+  currentFilter = "active",
+  renderList();
+});
+
+showCompletedBtn.addEventListener("click", () => {
+  currentFilter = "completed";
+  renderList();
+});
+renderList();
