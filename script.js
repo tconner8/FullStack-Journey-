@@ -1,5 +1,5 @@
 let name = "Ta";
-let day = 23;
+let day = 24;
 
 console.log(name);
 console.log(day);
@@ -12,11 +12,14 @@ greet();
 
 let isBlue = false;
 
-let items = JSON.parse(localStorage.getItem("goals")) || [
- { text: "Learn HTML", selected: false },
- { text: "Practice CSS", selected: false },
- { text: "Master JavaScript", selected: false },
- { text: "Build Projects 👌", selected: false }
+let stored = JSON.parse(localStorage.getItem("goals"));
+let items = stored && stored.length > 0
+? stored
+: [
+   { text: "Learn HTML", selected: false },
+   { text: "Practice CSS", selected: false },
+   { text: "Master JavaScript", selected: false },
+   { text: "Build Projects 👌", selected: false }
 ];
 
 const messages = [
@@ -39,13 +42,16 @@ let currentFilter = "all";
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
+
 const listE1 = document.getElementById("list");
 const input = document.getElementById("newItemInput");
 const addBTn = document.getElementById("addBtn");
-const clearCompletedBtn = document.getElementById("clearCompletedBtn");
+
 const showAllBtn = document.getElementById("showAllBtn");
 const showActiveBtn = document.getElementById("showActiveBtn");
 const showCompletedBtn = document.getElementById("showCompletedBtn");
+
+const clearCompletedBtn = document.getElementById("clearCompletedBtn");
 
 console.log("Button clicked");
 console.log("yeooooo I added another log in the console");
@@ -54,48 +60,36 @@ const dynamicMessage = document.createElement("p");
 dynamicMessage.textContent = "I was created with JavaScript 🎶";
 dynamicMessage.style.fontWeight = "bold";
 
-function addItem() {
-  const value = input.value.trim();
-
-  if (value === "") return;
-
-  items.push({
-    text: value,
-    selected: false
-});
-
-input .value = "";
-renderList();
-}
+function toggleItem(index) {
+      items[index].selected = !items[index].selected;
+    renderList();
+    }
 
 function renderList() {
-  list.innerHTML = "";
+  listE1.innerHTML = "";
   
 let filteredItems = items.filter(item => {
   if (currentFilter === "all") return true;
-  if (currentFilter === "active") return !items.selected;
+  if (currentFilter === "active") return !item.selected;
   if (currentFilter === "completed") return item.selected;
 });
 
-filteredItems.forEach((item, index) => {
+filteredItems.forEach(item => {
+  const index = items.indexOf(item);
+  
   const p = document.createElement("p");
   p.textContent = item.text;
   p.style.cursor = "pointer";
 
-  if (item.selected) {
+  if (item.selected) 
     p.classList.add("selected");
-  }
+  
 
-  p.addEventListener("click", () => { toggleItem(index);
+  p.addEventListener("click", () => toggleItem(index));
     console.log(item);
-    function toggleItem(index) {
-      items[index].selected = !items[index].selected;
-    renderList();
-    }
-  });
-
   listE1.appendChild(p);
 });
+
 localStorage.setItem("goals", JSON.stringify(items));
 }
 
@@ -118,20 +112,22 @@ if (!items.includes("Ship projects 🚀")) {
   currentIndex = (currentIndex + 1) % messages.length;
 });
 
-addBTn.addEventListener("click", addItem);
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    addItem();
-  }
+addBTn.addEventListener("click", () => {
+  const value = input.value.trim();
+  if (value === "") return;
+
+  items.push({
+    text: value,
+    selected: false
+  });
+  input.value = "";
+  renderList();
 });
 
-clearCompletedBtn.addEventListener("click", () => {
-    items = items.filter(item => !item.selected);
-    renderList();
-  });
 
 showAllBtn.addEventListener("click", () => {
   currentFilter = "all";
+  console.log("Filter is now:", currentFilter);
   renderList;
 });
 
@@ -145,3 +141,8 @@ showCompletedBtn.addEventListener("click", () => {
   renderList();
 });
 renderList();
+
+clearCompletedBtn.addEventListener("click", () => {
+    items = items.filter(item => !item.selected);
+    renderList();
+  });
