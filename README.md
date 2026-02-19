@@ -36,7 +36,7 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 21 Persistence state, JSON stringify/parse, auto save on render, load on startup.
 -Day 22 Higher order array methods(filter), state reassignment, persistence still working automatically
 -Day 23 Continuing day 22 multiple UI states, conditional rendering filtered views of state, arch seperation
--Day 24 Continuing Day 23 
+-Day 24 Removed malfunctioning "All" button from UI
 -Day 25
 -Day 26
 -Day 27
