@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const allBtn = document.getElementById("showALL");
+  if (allBtn) {
+    allBtn.remove();
+    console.log("All button removed permanently")
+  }
 let name = "Ta";
 let day = 24;
 
@@ -37,8 +43,7 @@ const messages = [
 
 let currentIndex = 0;
 
-
-let currentFilter = "all";
+let currentFilter = "active";
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
@@ -47,7 +52,6 @@ const listE1 = document.getElementById("list");
 const input = document.getElementById("newItemInput");
 const addBTn = document.getElementById("addBtn");
 
-const showAllBtn = document.getElementById("showAllBtn");
 const showActiveBtn = document.getElementById("showActiveBtn");
 const showCompletedBtn = document.getElementById("showCompletedBtn");
 
@@ -66,13 +70,16 @@ function toggleItem(index) {
     }
 
 function renderList() {
+  console.log("Items at start:", items);
   listE1.innerHTML = "";
   
-let filteredItems = items.filter(item => {
-  if (currentFilter === "all") return true;
+const filteredItems = items.filter(item => {
   if (currentFilter === "active") return !item.selected;
   if (currentFilter === "completed") return item.selected;
 });
+
+console.log("filter:", currentFilter);
+console.log("Filtered:", filteredItems);
 
 filteredItems.forEach(item => {
   const index = items.indexOf(item);
@@ -125,12 +132,6 @@ addBTn.addEventListener("click", () => {
 });
 
 
-showAllBtn.addEventListener("click", () => {
-  currentFilter = "all";
-  console.log("Filter is now:", currentFilter);
-  renderList;
-});
-
 showActiveBtn.addEventListener("click", () => {
   currentFilter = "active",
   renderList();
@@ -146,3 +147,5 @@ clearCompletedBtn.addEventListener("click", () => {
     items = items.filter(item => !item.selected);
     renderList();
   });
+
+});
