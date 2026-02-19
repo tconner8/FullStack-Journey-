@@ -1,11 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const allBtn = document.getElementById("showALL");
-  if (allBtn) {
-    allBtn.remove();
-    console.log("All button removed permanently")
-  }
+
 let name = "Ta";
-let day = 24;
+let day = 25;
 
 console.log(name);
 console.log(day);
@@ -147,5 +142,3 @@ clearCompletedBtn.addEventListener("click", () => {
     items = items.filter(item => !item.selected);
     renderList();
   });
-
-});
