@@ -35,8 +35,8 @@ My Goal is to become a Full-Stack Software Developer, begin freelancing, and eve
 -Day 20 Extracted logic into a function, rewired event listeners, kept behavior intact, did not break any codes this time around.
 -Day 21 Persistence state, JSON stringify/parse, auto save on render, load on startup.
 -Day 22 Higher order array methods(filter), state reassignment, persistence still working automatically
--Day 23 Continuing day 24 multiple UI states, conditional rendering filtered views of state,arch seperation
--Day 24
+-Day 23 Continuing day 22 multiple UI states, conditional rendering filtered views of state, arch seperation
+-Day 24 Continuing Day 23 
 -Day 25
 -Day 26
 -Day 27
