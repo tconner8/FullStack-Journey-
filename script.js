@@ -1,6 +1,6 @@
 
 let name = "Ta";
-let day = 25;
+let day = 26;
 
 console.log(name);
 console.log(day);
