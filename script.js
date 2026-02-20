@@ -14,14 +14,8 @@ greet();
 let isBlue = false;
 
 let stored = JSON.parse(localStorage.getItem("goals"));
-let items = stored && stored.length > 0
-? stored
-: [
-   { text: "Learn HTML", selected: false },
-   { text: "Practice CSS", selected: false },
-   { text: "Master JavaScript", selected: false },
-   { text: "Build Projects 👌", selected: false }
-];
+let items = stored || [];
+
 
 const messages = [
   { 
@@ -38,7 +32,7 @@ const messages = [
 
 let currentIndex = 0;
 
-let currentFilter = "active";
+let currentFilter = "null";
 
 const button = document.getElementById("alertBtn");
 const message = document.getElementById("message");
@@ -105,12 +99,16 @@ function updateMessage(messageData) {
 
 button.addEventListener("click", () => {
   updateMessage(messages[currentIndex]);
-if (!items.includes("Ship projects 🚀")) {
-  items.push("Ship projects 🚀");
-}  
+if (items.length === 0) 
+items = [
+   { text: "Learn HTML", selected: false },
+   { text: "Practice CSS", selected: false },
+   { text: "Master JavaScript", selected: false },
+   { text: "Build Projects 👌", selected: false }
+];  
+localStorage.setItem("goals", JSON.stringify(items));
 
-  renderList();
-
+renderList();
   currentIndex = (currentIndex + 1) % messages.length;
 });
 
